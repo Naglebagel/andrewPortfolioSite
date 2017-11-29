@@ -1,6 +1,9 @@
 console.log("scripts linked");
 
-$(".nav a").on("click", function(){
-   $(".nav").find(".active").removeClass("active");
-   $(this).parent().addClass("active");
+$(document).ready(function() {
+  $('#nav').localScroll({duration:800});
+    $(".button-collapse").sideNav({
+    closeOnClick: true
 });
+});
+

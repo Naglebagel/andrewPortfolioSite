@@ -5,63 +5,80 @@
 </head>
 <body>
 <header>	
-	<nav class="navbar fixed-top navbar-toggleable-sm navbar-dark bg-faded">
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-	<a class="navbar-brand" href="#">Andrew Nagle</a>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
-			<a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link" href="#contact">Contact</a>
-			<a class="nav-item nav-link" href="#projects">Projects</a>
-			<a class="nav-item nav-link" href="#skills">Skills</a>
-			</div>
-		</div>
-	</nav>
+	<% include ../views/partials/nav.ejs %>
 </header>
 	<main>
 		<section>
+			<div id=home><a name="home"></a></div>
 			<div class="container">
-				<div class="row d-flex justify-content-between">
-					<div class=col-md-12>
-						<h1><a name="home">Andrew Nagle</a></h1>
+				<div class="row">
+					<div class=col s12>
+						<h1>Andrew Nagle</h1>
 						<div>
-							<img class="myPic" src="/images/GA1017027.jpg">
+							<img class="myPic circle" src="/images/GA1017027.jpg">
 						</div>
-						<h2>About Me: </h2>
-						<p>I am a full stack web developer with a passion for coding, I love seeing the code I type into a text editor come to life in a browser. Since I began my job in IT support over five years ago, I have always had an interest in coding. Three months ago I decided to finally plunge head on into the coding world by enrolling in an immersive fullstack web development camp at General Assembly.</p><br>
-						<div>
-						<h2><a name="contact">Contact:</a></h2>
-						<ul>
-							<li>
-								<p>248-736-5700</p>
-							</li>
-							<li>
-								<a href="mailto:andrewnagle99@gmail.com">Contact Via Gmail</a>
-							</li>
-							<li>
-								<a href="https://www.linkedin.com/in/andrew-nagle99/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-							</li>
-						</ul>
-						</div>	
+						<div><a name="projects"></a></div>
+						<h2>About Me </h2>
+						<p>I am a full stack web developer with a passion for coding, I love seeing the code I type into a text editor come to life in a browser. Since I began my job in IT support over five years ago, I have always had an interest in coding. Three months ago I decided to finally plunge head on into the coding world by enrolling in an immersive fullstack web development camp at General Assembly.</p><br>	
 
 						<div>
-						<h2><a name="projects">Projects:</a></h2>
+						<h2>Projects</h2><br>
+							<div class="row">
+								<div class="col l6 m12">
+									<h3>Fumiko Zombie Castle</h3>
+									<p>Created a platformer video game where the player had to move through the level, while avoiding enemies. In order to win you had to reach the exit door.  Game mechanics included the ability to jump, jump on enemies to defeat them, and restart mechanic if you ran into an enemy.  In order to build this game I used Javascript, Express, CSS, HTML, Phaser, and Heroku.</p>
+								</div>
+								<div class="col l6 m12">
+									<img class=projPic src="/images/startScreen.png"><br>
+									<a href="https://github.com/Naglebagel/fumikoZombieCastle" rel="noopener noreferrer" target="_blank"><img src="/images/GitHub-Mark-32px.png"></a>
+									<a href="https://fumikozombiecastle.herokuapp.com/" rel="noopener noreferrer" target="_blank"><img src="/images/heroku.png"></a>
+								</div>
+							</div>
+							<hr>
+							<div class="row">
+								<div class="col l6 m12">
+									<h3>Movie and TV Review CRUD Application</h3>
+									<p>With a partner we created a review application. As a user if you did not create an account and login you could only view reviews for existing movies and shows. If you created an account/logged in you were allowed to add, update, and delete movies/tv shows.  By logging in you were also allowed to create new reviews. To create this application we used Express, Javascript, EJS, LESS, Gulp, and various NodeJs libraries.</p>
+								</div>
+								<div class="col l6 m12">
+									<img class=projPic src="/images/home.png"><br>
+									<a href="https://github.com/Naglebagel/projectTwoCRUD" rel="noopener noreferrer" target="_blank"><img src="/images/GitHub-Mark-32px.png"></a>
+									<a href="https://movieandtvreviews.herokuapp.com/" rel="noopener noreferrer" target="_blank"><img src="/images/heroku.png"></a>
+								</div>
+							</div>
+								<hr>
+							<div class="row">
+								<div class="col l6 m12">
+									<h3>Weather App</h3>
+									<p>Created a weather application using openweathermap.org's weather api. The app allows a user on the main view to enter a city name plus country code and then retrieve the weather for that city. If the user creates an account they can login and add multiple cities to retrieve the weather for.  The main screen upon a user logging in will display any cities they have added.  This was built using React, Sinatra, and PostgreSQL.</p>
+								</div>
+								<div><a name="contact"></a></div>
+								<div class="col l6 m12">
+									<img class=weatherPic src="/images/weatherAppHome.png"><br>
+									<a href="https://github.com/Naglebagel/weatherAppClient" rel="noopener noreferrer" target="_blank"><img src="/images/GitHub-Mark-32px.png"></a>
+									<a href="https://weatherappclient.herokuapp.com/" rel="noopener noreferrer" target="_blank"><img src="/images/heroku.png"></a>
+								</div>
+							</div>
+							<hr>
+						</div>
+						<div class= 'col-s12'>
+						<h2>Contact/Info</h2>
 						<ul>
 							<li>
-							<a href="https://fumikozombiecastle.herokuapp.com/">Fumiko Zombie Castle</a><br>
-							<img class=projPic src="/images/startScreen.png">
+								 <i class="material-icons">call</i><br><span>248-736-5700</span>
 							</li>
 							<li>
-							<a href="https://movieandtvreviews.herokuapp.com/">Movie and TV Reviews</a><br>
-							<img class=projPic src="/images/home.png">
+								 <i class="material-icons">email</i><br><span>andrewnagle99@gmail.com</span>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/andrew-nagle99/" rel="noopener noreferrer" target="_blank"><img  src="/images/Logo-2C-28px-R.png"></a>
 							</li>
 						</ul>
 						</div>
 
 						<div>
-						<h2><a name="skills">Skills:</a></h2>
+						<a name="skills"></a>
+						<h2>Skills</h2>
 						<ul>
 							<h4>Languages:</h4>
 							<li>
@@ -69,11 +86,11 @@
 							</li>
 							<h4>Web Development:</h4>
 							<li>
-							 CSS3, LESS, Node.js, Gulp, Ajax, Bootstrap, Express
+							 CSS3, LESS, Node.js, Gulp, Ajax, Bootstrap, Materialize, Express
 							</li>
 							<h4>Databases:</h4>
 							<li>
-							MongoDB, Microsoft SQL, MySQL
+							MongoDB, PostgreSQL, MySQL
 							</li>
 							<h4>Other:</h4>
 							<li>
@@ -88,14 +105,9 @@
 				</div>
 			</div>		
 		</section>
-
-		<section>
-			
-
-		</section>
-
 	</main>
 
 <script src="/javascripts/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 </html>
